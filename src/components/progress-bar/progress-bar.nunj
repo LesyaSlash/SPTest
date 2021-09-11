@@ -1,0 +1,9 @@
+{% macro progressBar(active=false) %}
+	<ol class="progress-bar">
+		{% for item in progressBarItems %}
+			<li class="progress-bar__item{% if item.active == true %} progress-bar__item--active{% endif %}">
+				<a href="{{ item.path }}" class="progress-bar__link link">{{ item.name }}</a>
+			</li>
+		{% endfor %}
+	</ol>
+{% endmacro %}

@@ -1,0 +1,20 @@
+.link {
+	text-decoration: none;
+
+	&--agreement {
+		@include font-style(14px, 16px, 400);
+		color: #000000;
+	}
+
+	@include non-touch() {
+		&:hover {
+			color: #36f;
+			transition: all 0.3s ease;
+		}
+	}
+
+	&:active {
+		color: #000;
+		opacity: 0.5;
+	}
+}

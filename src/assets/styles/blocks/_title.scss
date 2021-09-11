@@ -1,0 +1,14 @@
+.title {
+	@include font-style(18px, 21px, 700);
+	text-align: left;
+	color: #000;
+
+	@include viewport--md {
+		font-size: 18px;
+		line-height: 21px;
+	}
+}
+
+.title--h3 {
+	@include font-style(14px, 16px, 400);
+}

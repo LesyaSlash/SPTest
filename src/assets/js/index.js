@@ -17,8 +17,13 @@ class ProjectApp {
 			Signal: require('./classes/Signal').default,
 		};
 		this.components = {};
-		this.helpers = {};
-		this.modules = {};
+		this.helpers = {
+			ScrollLock: require('./utils/scroll-lock'),
+		};
+		this.modules = {
+			Cart: require('./modules/cart').default,
+			Menu: require('./modules/header-panels').default,
+		};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
 		});

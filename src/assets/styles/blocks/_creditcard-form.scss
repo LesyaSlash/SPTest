@@ -1,0 +1,44 @@
+.creditcard-form__wrapper {
+	margin-bottom: 44px;
+	padding: 20px 30px;
+	width: 550px;
+	border-radius: 5px;
+	box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.19);
+	border: solid 1px #cfcfcf;
+	background-color: #fff;
+}
+
+.creditcard-form label {
+	@include font-style(12px, 24px, 500);
+	color: #555770;
+}
+
+.creditcard-form label span {
+	display: inline-block;
+	min-width: 13px;
+	max-width: fit-content;
+	min-height: 13px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+	font-size: 10px;
+	line-height: 13px;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #dbdbdb;
+	border-radius: 50%;
+}
+
+.creditcard-form__buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 89px 0 30px;
+
+	@include viewport--lg {
+		padding-right: 78px;
+	}
+
+	@include viewport--md {
+		padding-right: 29px;
+	}
+}

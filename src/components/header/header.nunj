@@ -1,5 +1,7 @@
 <div class="header">
-	<div class="container">
-		{{ menu() }}
-	</div>
+	<a class="header__logo" href="#">
+		<img src={% inline 'logo.png' %} alt="logo" width="89" height="32"/>
+	</a>
+	{{ menu() }}
+	{{ asideMenu() }}
 </div>

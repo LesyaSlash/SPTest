@@ -1,0 +1,3 @@
+{% macro formField(props) %}
+	<input class="form-field {% if props.narrowField %} form-field--narrow {% endif %}" type="{{ props.type }}" id="{{ props.id }}" {% if props.placeholder %} placeholder= "{{ props.placeholder }}" {% endif %} {% if props.attributes %} {{ props.attributes }}{% endif %} />
+{% endmacro %}

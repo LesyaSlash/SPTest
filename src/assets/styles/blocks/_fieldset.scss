@@ -1,0 +1,30 @@
+.fieldset {
+	margin-bottom: 20px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.fieldset--two-col {
+	display: flex;
+}
+
+.fieldset__wrapper:not(:last-of-type) {
+	margin-right: 30px;
+}
+
+.fieldset--checkbox {
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.fieldset--checkbox .checkbox-label {
+	@include font-style(14px, 16px, 400);
+	display: block;
+	margin-left: 32px;
+	width: 100%;
+	color: #8c8c8c;
+
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}

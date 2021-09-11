@@ -1,35 +1,49 @@
 .button {
 	@extend .transition-active;
+	@include font-style(14px, 24px, 400);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid rgba(#000, 0.3);
-	height: 54px;
-	font-weight: 700;
+	padding: 8px 30px;
 	cursor: pointer;
-	font-size: 16px;
-	letter-spacing: -0.5px;
-	padding: 1px 20px 0;
+	border-radius: 3px;
 
-	&:hover {
-		background-color: rgba(#000, 0.3);
-		color: rgba(#000, 0.8);
-		transition: none;
-	}
+	&--white {
+		color: #000000;
+		background-color: #fff;
+		border: solid 1px #cfc;
 
-	&:active {
-		background-color: rgba(#000, 0.25);
-		border-color: rgba(#000, 0.25);
-
-		.button__chevron-right {
-			transform: translateX(1px);
-			transition: none;
+		@include non-touch() {
+			&:hover:not(:disabled) {
+				color: #fff;
+				background-color: rgba(51, 102, 255, 0.5);
+				border: 1px solid transparent;
+			}
 		}
 	}
 
-	&__chevron-right {
-		margin-left: 5px;
-		transition: transform 0.1s ease-out,
-			fill $default-transition-duration $default-transition-function;
+	&--blue {
+		color: #fff;
+		background-color: #36f;
+		border: 1px solid transparent;
+
+		@include non-touch() {
+			&:hover:not(:disabled) {
+				color: #000000;
+				background-color: #fff;
+				border: solid 1px #cfc;
+			}
+		}
+	}
+
+	&:disabled {
+		color: #000;
+		background-color: #8e90a6;
+		opacity: 0.5;
+		cursor: default;
+	}
+
+	&:active {
+		opacity: 0.5;
 	}
 }

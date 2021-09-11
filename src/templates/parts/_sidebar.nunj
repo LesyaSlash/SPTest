@@ -1,0 +1,76 @@
+<aside class="sidebar">
+	<div class="sidebar__overlay sidebar__overlay--hide"></div>
+	<div class="sidebar__wrapper sidebar__wrapper--hide">
+		<button class="sidebar__toggle btn-reset" type="button", aria-label="Переключатель отображения корзины">
+			{{ icon({
+				iconName: "close",
+				class: "icon",
+				attributes: 'style="width: 24px; height: 24px;"'
+			})}}
+		</button>
+		<section class="basket">
+			<h2 class="title">My basket</h2>
+			<ul class="basket__items">
+				{% for item in basketItems %}
+					<li class="basket__item">
+						<img src={% inline item.img + '.png' %} srcset=" {% inline item.img + '@2x.png' %}  alt="{{ item.imgAlt }}" width="100" height="100"/>
+						<div class="basket__item-info">
+							<h3 class="title title--h3">{{ item.title }}</h3>
+							<div class="basket__item-amount">
+								<button class="basket__button basket__button--minus btn-reset">
+									{{ icon({
+										iconName: "minus",
+										class: "icon",
+										attributes: 'style="width: 20px; height: 20px;"'
+									})}}
+								</button>
+								<span class="basket__amount">1</span>
+								<button class="basket__button basket__button--plus btn-reset">
+									{{ icon({
+										iconName: "plus",
+										class: "icon",
+										attributes: 'style="width: 20px; height: 20px;"'
+									})}}
+								</button>
+							</div>
+							<span class="basket__item-price">$ <span class="js-price"> {{ item.price }} </span></span>
+						</div>
+						<button class="basket__delete-btn btn-reset">
+							{{ icon({
+								iconName: "close",
+								class: "icon",
+								attributes: 'style="width: 18px; height: 18px;"'
+							})}}
+						</button>
+
+					</li>
+				{% endfor %}
+			</ul>
+		</section>
+		<section class="promo-code">
+			<h2 class="title">Promo code</h2>
+			{% include '../../templates/parts/_promocode-form.nunj' %}
+		</section>
+		<section class="total">
+			<h2 class="visually-hidden">Total</h2>
+			<table class="total__table">
+				<tr class="total__subtotal">
+					<td>Subtotal</td>
+					<td>$<span class="js-subtotal">1 050</span></td>
+				</tr>
+				<tr class="total__tax">
+					<td>Tax</td>
+					<td>$<span class="js-tax">100</span></td>
+				</tr>
+				<tr class="total__shipping">
+					<td>Shipping</td>
+					<td>$<span class="js-shipping">150</span></td>
+				</tr>
+				<tr class="total__total">
+					<td>Total</td>
+					<td>$<span class="js-total">1 300</span></td>
+				</tr>
+			</table>
+		</section>
+	</div>
+</aside>

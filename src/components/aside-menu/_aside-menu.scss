@@ -1,0 +1,49 @@
+.aside-menu {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -10px;
+
+	@include viewport--md {
+		margin-left: auto;
+	}
+}
+
+.aside-menu__item {
+	margin-left: 9px;
+	margin-top: 10px;
+	padding: 12px 8px 0;
+
+	@include viewport--md {
+		display: flex;
+		align-items: center;
+		margin-left: 13px;
+		margin-top: 15px;
+		padding: 0;
+		width: 40px;
+		height: 40px;
+	}
+
+	&--burger {
+		display: none;
+
+		@include viewport--md {
+			display: flex;
+		}
+	}
+}
+
+.aside-menu__item svg {
+	fill: #000;
+
+	@include non-touch() {
+		&:hover {
+			fill: #36f;
+			transition: all 0.3s ease;
+		}
+	}
+
+	&:active {
+		fill: #000;
+		opacity: 0.5;
+	}
+}

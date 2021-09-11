@@ -1,26 +1,61 @@
 {
 	"menuItems": [
 		{
-			"name": "Menu Item 1",
+			"name": "Women’s",
 			"path": "#"
 		},
 		{
-			"name": "Menu Item 2",
+			"name": "Men’s",
 			"path": "#"
 		},
 		{
-			"name": "Menu Item 3",
+			"name": "Home",
+			"path": "#"
+		},
+		{
+			"name": "Travel",
+			"path": "#"
+		},
+		{
+			"name": "Beauty",
+			"path": "#"
+		},
+		{
+			"name": "Sale",
 			"path": "#"
 		}
 	],
-	"someData": [
+	"progressBarItems": [
 		{
-			"title": "Item 1",
-			"text": "Desc 1"
+			"name": "Account",
+			"path": "#"
 		},
 		{
-			"title": "Item 2",
-			"text": "Desc 2"
+			"name": "Shipping",
+			"path": "#"
+		},
+		{
+			"name": "Billing",
+			"path": "#",
+		    "active": true
+		},
+		{
+			"name": "Review",
+			"path": "#"
+		}
+	],
+	"basketItems": [
+		{
+			"title": "Amet minim mollit non deserunt ullamco est sit",
+			"img": "jacket",
+			"imgAlt": "jacket",
+			"price": "525"
+		},
+		{
+			"title": "Amet minim mollit non",
+			"img": "sneakers",
+			"imgAlt": "sneakers",
+			"price": "525"
 		}
 	]
 }

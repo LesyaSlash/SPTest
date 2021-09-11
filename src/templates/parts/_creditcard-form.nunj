@@ -1,0 +1,73 @@
+{% from "../../components/form-field/form-field.nunj" import formField %}
+
+<form class="creditcard-form" autocomplete="off">
+	<div class="creditcard-form__wrapper">
+		<fieldset class="fieldset">
+			<label for="card-name">Name on card</label><br>
+			{{ formField ({
+				type: 'text',
+				id: 'card-name',
+				placeholder: 'Placeholder Text'
+			}) }}
+		</fieldset>
+		<fieldset class="fieldset">
+			<label for="card-number-1">Card number</label><br>
+			{{ formField ({
+				type: 'number',
+				id: 'card-number-1',
+				attributes: 'max="9999"',
+				narrowField: true
+			}) }}
+			{{ formField ({
+				type: 'number',
+				id: 'card-number-2',
+				attributes: 'max="9999"',
+				narrowField: true
+			}) }}
+			{{ formField ({
+				type: 'number',
+				id: 'card-number-3',
+				attributes: 'max="9999"',
+				narrowField: true
+			}) }}
+			{{ formField ({
+				type: 'number',
+				id: 'card-number-4',
+				attributes: 'max="9999"',
+				narrowField: true
+			}) }}
+		</fieldset>
+		<fieldset class="fieldset fieldset--two-col">
+			<div class="fieldset__wrapper">
+				<label for="card-expire">Expire date</label><br>
+				{{ formField ({
+					type: 'text',
+					id: 'card-expire',
+					attributes: 'pattern="(?:0[1-9]|1[0-2])/[0-9]{2}"',
+					narrowField: true
+				}) }}
+			</div>
+			<div class="fieldset__wrapper">
+				<label for="card-cvv">CVV code
+					<span>?</span>
+				</label><br>
+				{{ formField ({
+					type: 'number',
+					id: 'card-cvv',
+					attributes: 'max="9999"',
+					narrowField: true
+				}) }}
+			</div>
+		</fieldset>
+	</div>
+	<fieldset class="fieldset fieldset--checkbox">
+		<input class="checkbox" type="checkbox" id="card-save" checked/>
+		<label class="checkbox-label" for="card-save">Save information of this credit card</label>
+		<input class="checkbox" type="checkbox" id="card-agreement" />
+		<label class="checkbox-label" for="card-agreement">I accept the <a href="#" class="link link--agreement">terms and comditions</a> and the <a href="#" class="link link--agreement">Privacy Policies</a></label>
+	</fieldset>
+	<div class="creditcard-form__buttons">
+		<button type="reset" class="button button--white btn-reset">Back</button>
+		<button type="submit" class="button button--blue btn-reset">Check Out</button>
+	</div>
+</form>

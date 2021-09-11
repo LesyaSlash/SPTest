@@ -1,0 +1,21 @@
+.total {
+	padding: 40px 55px 40px 40px;
+}
+
+.total__table {
+	width: 100%;
+}
+
+.total__table td {
+	@include font-style(14px, 34px, 400);
+	width: 50%;
+}
+
+.total__total td {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.total__table td:last-of-type {
+	text-align: right;
+}

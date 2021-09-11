@@ -1,0 +1,36 @@
+.form-field {
+	padding: 10px;
+	width: 100%;
+	border-radius: 3px;
+	border-color: transparent;
+	background-color: #ededf1;
+	outline: none;
+
+	&::placeholder {
+		@include font-style(14px, 24px, 400);
+		color: #8e90a6;
+	}
+
+	&--narrow {
+		width: 100px;
+
+		&:not(:last-of-type) {
+			margin-right: 5.3%;
+		}
+	}
+
+	@include non-touch() {
+		&:hover {
+			box-shadow: 0 0 0 1px #8e90a6;
+			transition: all 0.3s ease;
+		}
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 1px #8e90a6;
+	}
+
+	@include viewport--md {
+		padding: 10px 7px;
+	}
+}

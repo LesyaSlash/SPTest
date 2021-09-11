@@ -1,0 +1,69 @@
+.billing {
+	padding: 60px 17% 60px 22%;
+
+	@include viewport--lg {
+		padding: 60px 6%;
+	}
+
+	@include viewport--md {
+		padding: 62px 6.5%;
+	}
+}
+
+.billing .title {
+	margin-left: 31px;
+	letter-spacing: -0.4px;
+
+	@include viewport--md {
+		letter-spacing: normal;
+	}
+}
+
+.billing__tabs {
+	display: flex;
+	margin-top: 42px;
+	padding: 0 30px;
+}
+
+.billing__tab {
+	width: 34%;
+
+	@include viewport--lg {
+		width: 35%;
+	}
+
+	@include viewport--md {
+		width: 39%;
+	}
+}
+
+.billing__tab-link {
+	position: relative;
+	padding-left: 27px;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		border: 1px solid #cfcfcf;
+		content: '';
+	}
+}
+
+.billing__tab--active > .billing__tab-link::after {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	left: 5px;
+	top: 5px;
+	background-color: #36f;
+	border-radius: 50%;
+	content: '';
+}
+
+.billing__form {
+	margin-top: 38px;
+}

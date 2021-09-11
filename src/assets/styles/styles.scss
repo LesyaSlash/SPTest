@@ -5,11 +5,28 @@
 @import 'reset';
 @import 'global';
 @import 'layout';
+@import 'lib/btn-reset';
 // @import 'controls';
 
 // ======= COMPONENTS =======
 @import '../../components/header/header';
 @import '../../components/button/button';
+@import '../../components/aside-menu/aside-menu';
+@import '../../components/menu/menu';
+@import '../../components/form-field/form-field';
+@import '../../components/progress-bar/progress-bar';
 
-// ======= PAGES =======
-@import 'pages/main';
+// ======= BLOCKS =======
+@import 'blocks/inner';
+@import 'blocks/title';
+@import 'blocks/sidebar';
+@import 'blocks/billing';
+@import 'blocks/basket';
+@import 'blocks/creditcard-form';
+@import 'blocks/promo-code';
+@import 'blocks/promocode-form';
+@import 'blocks/total';
+@import 'blocks/checkbox-label';
+@import 'blocks/link';
+@import 'blocks/checkbox';
+@import 'blocks/fieldset';

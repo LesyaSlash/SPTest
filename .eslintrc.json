@@ -55,7 +55,8 @@
 	  	"max-classes-per-file": "off",
 		"no-return-assign": "off",
 		"no-continue": "off",
-		"no-debugger": "off"
+		"no-debugger": "off",
+		"no-use-before-define": ["error", { "variables": false }]
 	},
 	"plugins": [
 		"babel",

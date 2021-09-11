@@ -1,7 +1,20 @@
 {% macro menu(active=false) %}
 	<nav class="menu">
-		{% for item in menuItems %}
-			<a href="{{ item.path }}" class="menu__item{% if item.id == activeItem %} _active{% endif %}" style="margin-right: 15px;">{{ item.name }}</a>
-		{% endfor %}
+		<div class="menu__overlay menu__overlay--hide"></div>
+		<div class="menu__wrapper menu__wrapper--hide">
+			<button class="menu__toggle btn-reset" type="button", aria-label="Переключатель отображения меню">
+				<svg class="icon" style="width: 24px; height: 24px;">
+					<use xlink:href="#icon-close" />
+				</svg>
+			</button>
+
+			<ul class="menu__list">
+				{% for item in menuItems %}
+					<li class="menu__item">
+						<a href="{{ item.path }}" class="menu__link{% if item.id == activeItem %} _active{% endif %}" style="margin-right: 15px;">{{ item.name }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</nav>
 {% endmacro %}

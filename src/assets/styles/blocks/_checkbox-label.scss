@@ -1,0 +1,28 @@
+.checkbox-label {
+	position: relative;
+	padding-left: 26px;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: -2px;
+		width: 18px;
+		height: 18px;
+		border: 1px solid #cfcfcf;
+		content: '';
+	}
+
+	@include non-touch() {
+		&:hover::before {
+			border-color: #8e90a6;
+			transition: all 0.3s ease;
+		}
+	}
+}
+
+.checkbox:checked + .checkbox-label {
+	&::before {
+		background-color: #36f;
+		box-shadow: inset 0 0 0 4px #fff;
+	}
+}

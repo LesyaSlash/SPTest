@@ -1,0 +1,33 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% macro asideMenu() %}
+	<div class="aside-menu">
+		<div class="aside-menu__item aside-menu__item--search">
+			<button class="btn-reset" type="button">
+			{{ icon({
+				iconName: 'search',
+				className: 'icon',
+				attributes: 'style="width: 24px; height: 24px;"'
+			}) }}
+			</button>
+		</div>
+		<div class="aside-menu__item aside-menu__item--cart">
+			<button class="btn-reset" type="button">
+			{{ icon({
+				iconName: 'cart',
+				className: 'icon',
+				attributes: 'style="width: 24px; height: 24px;"'
+			}) }}
+			</button>
+		</div>
+		<div class="aside-menu__item aside-menu__item--burger">
+			<button class="btn-reset" type="button">
+			{{ icon({
+				iconName: 'burger',
+				className: 'icon',
+				attributes: 'style="width: 30px; height: 30px;"'
+			}) }}
+			</button>
+		</div>
+	</div>
+{% endmacro %}

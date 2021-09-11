@@ -1,0 +1,16 @@
+.inner {
+	display: flex;
+	max-width: 1800px;
+	margin: 0 auto;
+	@include font-style(14px, 16px, 400);
+	color: #000000;
+}
+
+.inner__container {
+	padding: 60px 0;
+	width: calc(100% - 410px);
+
+	@include viewport--md {
+		width: 100%;
+	}
+}

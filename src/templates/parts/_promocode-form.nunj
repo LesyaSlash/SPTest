@@ -1,0 +1,11 @@
+{% from "../../components/form-field/form-field.nunj" import formField %}
+
+<form class="promocode-form">
+	<label for="promo-code"></label>
+	{{ formField ({
+		type: 'text',
+		id: 'promo-code',
+		placeholder: "Placeholder Text"
+	})}}
+	<button class="button button--blue btn-reset" type="submit">Apply</button>
+</form>
