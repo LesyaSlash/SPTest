@@ -149,7 +149,7 @@ The ability to create SVG sprites with the help of [gulp-svgstore](https://githu
     iconName: 'some-vector-image',
     className: 'icon',
     attributes: 'viewBox="0 0 20 20"'
-}) }}
+})}}
 ```
 
 The properties `className` and` attributes` are optional. The SVG file `some-vector-image.svg` should be in the folder `src/assets/svg/`. Width and height must be set in styles for such element. You can also change fill, stroke, but the element should not have the same attributes (fill and stroke) in the source file `some-vector-image.svg`.

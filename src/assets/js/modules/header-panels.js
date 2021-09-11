@@ -90,6 +90,13 @@ const openPanel = (openBtnClass, panelClass, overlayClass, closeBtnClass) => {
 				openBtn.addEventListener('click', onOpenBtnClick);
 			}
 		});
+
+		if (module.hot) {
+			module.hot.dispose(() => {
+				openBtn.removeEventListener('click', onOpenBtnClick);
+				closeBtn.removeEventListener('click', onCloseBtnClick);
+			});
+		}
 	}
 };
 

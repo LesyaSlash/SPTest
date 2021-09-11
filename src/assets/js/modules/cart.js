@@ -5,11 +5,9 @@ const initCart = () => {
 		if (basketWrapper) {
 			const items = basketWrapper.querySelectorAll('.basket__item');
 			const subtotalWrapper = basketBlock.querySelector('.js-subtotal');
-			//let subtotal = parseInt(subtotalWrapper.textContent, 10);
 			const totalWrapper = basketBlock.querySelector('.js-total');
 			const tax = parseInt(basketBlock.querySelector('.js-tax').textContent, 10);
 			const shipping = parseInt(basketBlock.querySelector('.js-shipping').textContent, 10);
-			//let total = parseInt(totalWrapper.textContent, 10);
 
 			const amountCalculate = () => {
 				const priceWrappers = basketBlock.querySelectorAll('.js-price');
@@ -67,11 +65,6 @@ const initCart = () => {
 						newPrice = 0;
 					}
 				};
-
-				// const changeSubtotal = () => {
-				// 	subtotal = subtotal + newPrice;
-				// 	subtotalWrapper.textContent = subtotal;
-				// };
 
 				btnMinus.addEventListener('click', evt => {
 					evt.preventDefault();
